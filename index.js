@@ -81,6 +81,6 @@ app.delete("/chats/:id", async (req,res) =>{
 app.get("/", (req,res) => {
     res.send("root is working");
 });
-app.listen(8080, () => {
+app.listen(3000, () => {
     console.log("Server is listening on port 8080");
 });
