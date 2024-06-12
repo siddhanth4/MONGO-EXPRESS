@@ -6,10 +6,10 @@
     <title>Edit message</title>
 </head>
 <body>
-    <h3> Edit your chats <%= chat._id %> </h3>
-    <p> This chat was sent from <%= chat.from %> to <%= chat.to %> </p>
-    <form>
-        <textarea  name= "msg" rows= "5" cols="10" <%= chat.msg %>></textarea>
+    <p> Edit your chats <%= chat._id %> </p>
+    <p> This chat was sent from <b><%= chat.from %></b> to <b><%= chat.to %></b> </p>
+    <form method="POST" action="/chats/<%= chat._id %>?_method=PUT"> 
+        <textarea name= "msg" rows= "5" cols="50"> <%= chat.msg %> </textarea>
         <button>Edit</button>
     </form>
 </body>
